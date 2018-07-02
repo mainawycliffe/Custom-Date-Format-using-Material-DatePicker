@@ -1,18 +1,46 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_FORMATS
+} from '@angular/material-moment-adapter';
+import { DatePickerComponent } from './utility/date-picker/date-picker.component';
+import {
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  DateAdapter,
+  MAT_DATE_LOCALE,
+  MAT_DATE_FORMATS,
+  MatCardModule
+} from '@angular/material';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, DatePickerComponent],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FlexLayoutModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE]
+    },
+    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
