@@ -1,0 +1,5 @@
+<mat-form-field fxFlex="100">
+  <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+  <input matInput [matDatepicker]="picker" [value]="dateValue" (dateInput)="addEvent('input', $event)" [placeholder]="placeholder">
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
