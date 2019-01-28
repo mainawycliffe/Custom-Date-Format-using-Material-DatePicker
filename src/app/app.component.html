@@ -1,5 +1,5 @@
-<mat-card fxFlex="600px" fxFlexOffset="calc(50% - 300px)" fxFlexOffset.lt-sm="0" fxLayoutGap="10px" fxFlex.lt-sm="100" fxLayout="row wrap"
-  style="margin: 20px;">
+<mat-card fxFlex="600px" fxFlexOffset="calc(50% - 300px)" fxFlexOffset.lt-sm="0" fxLayoutGap="10px" fxFlex.lt-sm="100"
+  fxLayout="row wrap" style="margin: 20px;">
   <div fxFlex="100" fxLayout="row wrap">
     <div fxFlex="100" style="padding: 10px; font-weight: bold;">
       Custom Date Format using Material DatePicker
@@ -50,6 +50,13 @@
         </span>
       </div>
     </div>
-    </div>
   </div>
+
+  <div fxFlex="100" style="padding-top: 20px; font-weight: bold;">
+    Min Date Example
+  </div>
+  <div fxFlex="100" fxLayout="column" style="margin: 20px;">
+    <app-date-picker placeholder="Min Date Example" [minDate]="minDate" format="MMM YYYY"></app-date-picker>
+  </div>
+
 </mat-card>

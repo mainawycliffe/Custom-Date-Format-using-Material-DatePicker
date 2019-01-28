@@ -18,5 +18,7 @@ export class AppComponent implements OnInit {
 
   public sixthDate = moment();
 
+  public minDate = moment().subtract(1, 'months');
+
   ngOnInit() {}
 }

@@ -28,6 +28,8 @@ export class DatePickerComponent implements ControlValueAccessor {
    */
   @Input() public placeholder: string = null;
 
+  @Input() public minDate = null;
+
   /**
    * The date format to use with default format but allowing you to pass a custom date format
    */
