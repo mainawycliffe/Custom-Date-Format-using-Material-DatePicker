@@ -48,6 +48,11 @@ export class DatePickerComponent implements ControlValueAccessor {
     this.dateValue = moment(event.value, this.format);
   }
 
+  displayDateValue(date) {
+    console.log(moment(date, this.format));
+    return moment(date, this.format);
+  }
+
   writeValue(value: any) {
     if (value !== undefined) {
       this.dateValue = moment(value, this.format);
