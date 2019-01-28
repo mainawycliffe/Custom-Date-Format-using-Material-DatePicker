@@ -41,6 +41,15 @@
           <strong> {{ fifthDate }}</strong>
         </span>
       </div>
+
+      <div fxFlex="100" fxLayout="column" style="margin: 20px;">
+        <app-date-picker placeholder="Enter The Fifth Date" [(ngModel)]="sixthDate" format="MMM YYYY"></app-date-picker>
+        <span> Date Format:
+          <strong>YY/MM/DD</strong> - Value:
+          <strong> {{ sixthDate }}</strong>
+        </span>
+      </div>
+    </div>
     </div>
   </div>
 </mat-card>

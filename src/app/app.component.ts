@@ -16,5 +16,7 @@ export class AppComponent implements OnInit {
   public fourthDate = moment();
   public fifthDate = moment();
 
+  public sixthDate = moment();
+
   ngOnInit() {}
 }
