@@ -19,9 +19,10 @@ import {
   MAT_DATE_FORMATS,
   MatCardModule
 } from '@angular/material';
+import { DatePicker2Component } from './utility/date-picker2/date-picker2.component';
 
 @NgModule({
-  declarations: [AppComponent, DatePickerComponent],
+  declarations: [AppComponent, DatePickerComponent, DatePicker2Component],
   imports: [
     BrowserModule,
     FormsModule,
